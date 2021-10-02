@@ -34,12 +34,13 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication().withUser("admin").password("admin123").roles("ADMIN");
         auth.inMemoryAuthentication().withUser("student").password("student123").roles("STUDENT");
     }
-    
+
 
     @Bean
     public PasswordEncoder passwordEncoder(){
         return NoOpPasswordEncoder.getInstance();
     }
+    
 
     }
 
